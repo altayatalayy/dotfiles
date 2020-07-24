@@ -14,10 +14,13 @@ Plugin 'dracula/vim',{'name':'dracula'}
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+packadd! dracula
+syntax enable
+colorscheme dracula
+
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-colorscheme dracula
 
 set encoding=utf-8
 set hls
